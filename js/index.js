@@ -48,6 +48,8 @@ function show_detail(wpid){
 
   if (liked_local2.indexOf(wpid) != -1){
       eid('like_this').innerHTML = '<i class="material-icons left">favorite</i>Убрать из избранного';
+  } else {
+      eid('like_this').innerHTML = '<i class="material-icons left">favorite_border</i>В избранное';
   }
 
   $('#modal_details').modal('open');
