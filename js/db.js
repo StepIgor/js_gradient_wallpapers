@@ -82,5 +82,17 @@ var wallpapers = {
     "colors": ["синий", "голубой"],
     "type": "плитка",
     "platform": "mobile"
+  },
+  15:{
+    "date": "24.10.2020",
+    "colors": ["черный", "серый"],
+    "type": "плитка",
+    "platform": "pc"
+  },
+  16:{
+    "date": "24.10.2020",
+    "colors": ["черный", "серый"],
+    "type": "плитка",
+    "platform": "mobile"
   }
 }
