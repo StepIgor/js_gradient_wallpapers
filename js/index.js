@@ -16,12 +16,12 @@ if (liked.length == 0) eid('tab3content').innerHTML = '<div class="col s12 m12 l
 Object.keys(wallpapers).forEach((wpid, i) => {
   if (wallpapers[wpid]['platform'] == 'pc'){
     //pc
-    eid('tab2content').innerHTML += '<div class="col s12 m6 l4"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
-    if (liked.indexOf(Number(wpid)) != -1) eid('tab3content').innerHTML += '<div class="col s12 m6 l4"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
+    eid('tab2content').innerHTML += '<div class="col s12 m6 l4"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/preview/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
+    if (liked.indexOf(Number(wpid)) != -1) eid('tab3content').innerHTML += '<div class="col s12 m6 l4"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/preview/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
   } else {
     //mobile
-    eid('tab1content').innerHTML += '<div class="col s4 m3 l2"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
-    if (liked.indexOf(Number(wpid)) != -1) eid('tab3content').innerHTML += '<div class="col s4 m3 l2"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
+    eid('tab1content').innerHTML += '<div class="col s4 m3 l2"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/preview/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
+    if (liked.indexOf(Number(wpid)) != -1) eid('tab3content').innerHTML += '<div class="col s4 m3 l2"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/preview/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
   }
 });
 
@@ -33,7 +33,7 @@ function show_detail(wpid){
 
   //fill with data
   eid('modal_header').innerHTML = '#'+wpid;
-  eid('modal_picture').src = "img/wallpapers/" + wpid + ".png";
+  eid('modal_picture').src = "img/wallpapers/preview/" + wpid + ".png";
   eid('modal_platform').innerHTML = wallpapers[wpid]['platform'] == 'mobile' ? 'смартфон' : 'компьютер';
   colors = '';
   wallpapers[wpid]['colors'].forEach((item, i) => {
@@ -62,10 +62,10 @@ function reparse_liked(){
   liked_local3.forEach((wpid, i) => {
     if (wallpapers[wpid]['platform'] == 'pc'){
       //pc
-      eid('tab3content').innerHTML += '<div class="col s12 m6 l4"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
+      eid('tab3content').innerHTML += '<div class="col s12 m6 l4"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/preview/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
     } else {
       //mobile
-      eid('tab3content').innerHTML += '<div class="col s4 m3 l2"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
+      eid('tab3content').innerHTML += '<div class="col s4 m3 l2"><div class="card hoverable" onclick="show_detail('+wpid+')" style="cursor:pointer;"><div class="card-image"><img src="img/wallpapers/preview/'+wpid+'.png"><span class="card-title">#'+wpid+'</span></div></div></div>';
     }
   });
 }
