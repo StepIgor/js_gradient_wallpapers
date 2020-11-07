@@ -94,5 +94,11 @@ var wallpapers = {
     "colors": ["черный", "серый"],
     "type": "плитка",
     "platform": "mobile"
+  },
+  17:{
+    "date": "07.11.2020",
+    "colors": ["красный", "чёрный"],
+    "type": "кристалл",
+    "platform": "pc"
   }
 }
